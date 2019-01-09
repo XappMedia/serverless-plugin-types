@@ -1,3 +1,5 @@
+export type StringOrObject = string | object;
+
 /**
  * Attributes that can be used when importing
  * api gateway paths from other serverless.yml files.
@@ -28,7 +30,7 @@ export interface ServerlessProvider {
     deploymentBucket: {
         name: string;
     };
-    apiGateway: ApiGatewayImports;
+    apiGateway?: ApiGatewayImports;
 }
 
 /**
