@@ -1,13 +1,17 @@
 {
-  "name": "serverless-plugin-types",
+  "name": "@xapp/serverless-plugin-types",
   "version": "0.0.1",
   "description": "Common typescript types that can be used for creating serverless plugins.",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "clean": "rm -rf ./node_modules",
+    "version:release": "standard-version --message 'v%s'",
+    "postversion": "git push --follow-tags origin master && npm publish",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
-    "serverless"
+    "serverless",
+    "plugin"
   ],
   "author": "Chris Dietz",
   "license": "ISC",
