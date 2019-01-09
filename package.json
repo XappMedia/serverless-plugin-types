@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf ./node_modules",
     "version:release": "standard-version --message 'v%s'",
-    "postversion": "git push --follow-tags origin master && npm publish"
+    "postversion:release": "git push --follow-tags origin master && npm publish"
   },
   "keywords": [
     "serverless",
