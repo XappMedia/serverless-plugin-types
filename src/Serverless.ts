@@ -1,6 +1,34 @@
+/**
+ * Attributes that can be used when importing
+ * api gateway paths from other serverless.yml files.
+ */
+export interface ApiGatewayImports {
+    restApiId: string | object;
+    restApiRootResourceId: string | object;
+    restApiResources: {
+        [resourcePath: string]: string | object;
+    };
+}
+
+/**
+ * Attributes that are in the Serverless Provider section.
+ */
 export interface ServerlessProvider {
+    name: string;
+    runtime: string;
+    versionFunctions?: boolean;
+    memorySize?: number;
+    endpointType?: string;
+    stage?: string;
     region?: string;
     profile?: string;
+    stackTags?: string[];
+    environment?: string;
+    timeout?: number;
+    deploymentBucket: {
+        name: string;
+    };
+    apiGateway: ApiGatewayImports;
 }
 
 /**
@@ -10,9 +38,42 @@ export interface CLI {
     log(msg: string): void;
 }
 
+/**
+ * Details of a lambda function.
+ */
+export interface Function {
+    [key: string]: any;
+}
+
+/**
+ * Collection of lambda function declarations.
+ */
+export interface ServerlessFunctions {
+    [name: string]: Function;
+}
+
+/**
+ * Details of resources that are in the Serverless system.
+ */
+export interface Resource {
+    [key: string]: any;
+}
+
+/**
+ * Collection of resources.
+ */
+export interface Resources {
+    [name: string]: Resource;
+}
+
+/**
+ * The object that contains all the declarations in the serverless.yml file.
+ */
 export interface ServerlessService<Custom> {
     provider?: ServerlessProvider;
     custom?: Custom;
+    functions?: ServerlessFunctions;
+    resources?: Resources;
 }
 
 /**
