@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.2"></a>
+## [0.1.2](https://github.com/XappMedia/serverless-plugin-types/compare/v0.1.1...v0.1.2) (2019-01-09)
+
+
+### Bug Fixes
+
+* Adding .vscode config to ignore ([a72f8ed](https://github.com/XappMedia/serverless-plugin-types/commit/a72f8ed))
+* Using an index rather than requiring direct reference ([51d86df](https://github.com/XappMedia/serverless-plugin-types/commit/51d86df))
+
+
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/XappMedia/serverless-plugin-types/compare/v0.1.0...v0.1.1) (2019-01-09)
 
