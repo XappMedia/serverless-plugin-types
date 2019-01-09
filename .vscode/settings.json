@@ -1,5 +1,19 @@
+// Place your settings in this file to overwrite default and user settings.
 {
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/*.js.map": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/.nyc_output": true,
+    },
+    "files.trimTrailingWhitespace": true,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "tslint.enable": true,
+    "tslint.autoFixOnSave": true,
     "cSpell.words": [
         "serverless"
-    ]
+    ],
 }
