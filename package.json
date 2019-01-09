@@ -1,0 +1,17 @@
+{
+  "name": "serverless-plugin-types",
+  "version": "0.0.1",
+  "description": "Common typescript types that can be used for creating serverless plugins.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "serverless"
+  ],
+  "author": "Chris Dietz",
+  "license": "ISC",
+  "devDependencies": {
+    "standard-version": "^4.4.0"
+  }
+}
