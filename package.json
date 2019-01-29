@@ -1,5 +1,5 @@
 {
-  "name": "@xapp/serverless-plugin-types",
+  "name": "serverless-plugin-type-definitions",
   "version": "0.1.5",
   "description": "Common typescript types that can be used for creating serverless plugins.",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "serverless",
     "plugin"
   ],
-  "author": "Chris Dietz",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "standard-version": "^4.4.0"
