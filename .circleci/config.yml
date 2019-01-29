@@ -60,7 +60,7 @@ jobs:
     steps:
       - checkout
 
-      - *restoreCache
+      - run: npm install
 
       - run:
          name: Setting Up Git Email
