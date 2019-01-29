@@ -1,6 +1,6 @@
 {
   "name": "serverless-plugin-type-definitions",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Common typescript types that can be used for creating serverless plugins.",
   "main": "index.js",
   "scripts": {
