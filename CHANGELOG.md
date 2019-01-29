@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.18"></a>
+## [0.1.18](https://github.com/XappMedia/serverless-plugin-types/compare/v0.1.17...v0.1.18) (2019-01-29)
+
+
+
 <a name="0.1.17"></a>
 ## [0.1.17](https://github.com/XappMedia/serverless-plugin-types/compare/v0.1.16...v0.1.17) (2019-01-29)
 
