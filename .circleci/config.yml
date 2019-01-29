@@ -60,6 +60,19 @@ jobs:
     steps:
       - *attachWorkspace
       - *restoreCache
+
+      - run:
+         name: Setting Up Git Email
+         command: git config user.email "robot@xappmedia.com"
+
+      - run:
+         name: Setting Up Git Username
+         command: git config user.name "xappbot"
+
+      - run:
+         name: NPM Token Setup
+         command: 'echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc'
+
       - run:
           name: Release Version
           command: npm run version:release
@@ -72,6 +85,7 @@ workflows:
       - release:
           requires:
             - build
+          context: org-global
           filters:
             branches:
               only: master
