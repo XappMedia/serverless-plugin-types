@@ -49,8 +49,9 @@ jobs:
     <<: *defaults
 
     steps:
-      - *attachWorkspace
-      - *restoreCache
+      - checkout
+
+      - run: npm install
 
       - run:
          name: Setting Up Git Email
@@ -80,7 +81,6 @@ workflows:
       - release:
           requires:
             - build
-          context: org-global
           filters:
             branches:
               only: master
