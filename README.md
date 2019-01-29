@@ -8,7 +8,7 @@ This is so far incomplete and will be added upon as needed. PRs welcome.
 # Install
 
 ```
-npm install --save-dev serverless-plugin-type-definitions
+npm install --save-dev @xapp/serverless-plugin-type-definitions
 ```
 
 # Usage
