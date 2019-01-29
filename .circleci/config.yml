@@ -1,0 +1,77 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+
+defaults: &defaults
+    working_directory: ~/repo
+    parallelism: 1
+    docker:
+      - image: circleci/node:7.10
+
+aliases:
+    - &attachWorkspace
+        attach_workspace:
+          at: ~/repo
+
+    - &restoreCache
+        restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+
+    - &storeDeploy
+        store_artifacts:
+          path: ./deploy
+
+jobs:
+  build:
+    <<: *defaults
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: npm install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - persist_to_workspace:
+          root: ~/repo
+          paths:
+            - .git
+            - src
+            - package.json
+            - tsconfig.json
+            - tslint.json
+
+  release:
+    <<: *defaults
+
+    steps:
+      - *attachWorkspace
+      - *restoreCache
+      - run:
+          name: Release Version
+          command: npm run version:release
+
+workflows:
+  version: 2
+  test_and_deploy:
+    jobs:
+      - build
+      - release:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
