@@ -1,6 +1,6 @@
 {
   "name": "@xapp/serverless-plugin-type-definitions",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "description": "Common typescript types that can be used for creating serverless plugins.",
   "main": "index.js",
   "scripts": {
