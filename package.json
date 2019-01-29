@@ -8,6 +8,10 @@
     "version:release": "standard-version --message 'v%s'",
     "postversion:release": "git push --follow-tags origin master && npm publish"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XappMedia/serverless-plugin-types.git"
+  },
   "keywords": [
     "serverless",
     "plugin"
