@@ -58,7 +58,8 @@ jobs:
     <<: *defaults
 
     steps:
-      - *attachWorkspace
+      - checkout
+
       - *restoreCache
 
       - run:
