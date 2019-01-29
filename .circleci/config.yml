@@ -53,7 +53,7 @@ jobs:
     <<: *defaults
 
     steps:
-      - &attachWorkspace
+      - *attachWorkspace
 
       - run:
          name: Setting Up Git Email
