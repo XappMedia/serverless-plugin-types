@@ -20,10 +20,6 @@ aliases:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
 
-    - &storeDeploy
-        store_artifacts:
-          path: ./deploy
-
 jobs:
   build:
     <<: *defaults
@@ -54,6 +50,7 @@ jobs:
 
     steps:
       - *attachWorkspace
+      - *restoreCache
 
       - run:
          name: Setting Up Git Email
