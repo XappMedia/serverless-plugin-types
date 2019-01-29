@@ -47,20 +47,13 @@ jobs:
 
       - persist_to_workspace:
           root: ~/repo
-          paths:
-            - .git
-            - src
-            - package.json
-            - tsconfig.json
-            - tslint.json
+          paths: .
 
   release:
     <<: *defaults
 
     steps:
-      - checkout
-
-      - run: npm install
+      - &attachWorkspace
 
       - run:
          name: Setting Up Git Email
@@ -72,7 +65,7 @@ jobs:
 
       - run:
          name: NPM Token Setup
-         command: 'echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc'
+         command: 'echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/repo/.npmrc'
 
       - add_ssh_keys:
           fingerprints:
@@ -86,7 +79,10 @@ workflows:
   version: 2
   deploy:
     jobs:
+      - build
       - release:
+          requires:
+            - build
           filters:
             branches:
               only: master
