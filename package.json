@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf ./node_modules",
-    "version:release": "standard-version --message 'v%s'",
+    "version:release": "standard-version --message '[skip ci] v%s'",
     "postversion:release": "git push --follow-tags origin master && npm publish"
   },
   "repository": {
