@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.22"></a>
+## [0.1.22](https://github.com/XappMedia/serverless-plugin-types/compare/v0.1.21...v0.1.22) (2019-02-04)
+
+
+### Bug Fixes
+
+* Adding "service" to types ([562f130](https://github.com/XappMedia/serverless-plugin-types/commit/562f130))
+
+
+
 <a name="0.1.21"></a>
 ## [0.1.21](https://github.com/XappMedia/serverless-plugin-types/compare/v0.1.20...v0.1.21) (2019-01-29)
 
