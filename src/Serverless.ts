@@ -72,6 +72,7 @@ export interface Resources {
  * The object that contains all the declarations in the serverless.yml file.
  */
 export interface ServerlessService<Custom> {
+    service: string;
     provider?: ServerlessProvider;
     custom?: Custom;
     functions?: ServerlessFunctions;
