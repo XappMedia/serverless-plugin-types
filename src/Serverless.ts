@@ -1,14 +1,15 @@
-export type StringOrObject = string | object;
+import { Function } from "./Function";
+import { StringOrObject } from "./StringOrObject";
 
 /**
  * Attributes that can be used when importing
  * api gateway paths from other serverless.yml files.
  */
 export interface ApiGatewayImports {
-    restApiId: string | object;
-    restApiRootResourceId: string | object;
+    restApiId: StringOrObject;
+    restApiRootResourceId: StringOrObject;
     restApiResources: {
-        [resourcePath: string]: string | object;
+        [resourcePath: string]: StringOrObject;
     };
 }
 
@@ -38,13 +39,6 @@ export interface ServerlessProvider {
  */
 export interface CLI {
     log(msg: string): void;
-}
-
-/**
- * Details of a lambda function.
- */
-export interface Function {
-    [key: string]: any;
 }
 
 /**
