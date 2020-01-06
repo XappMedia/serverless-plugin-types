@@ -10,7 +10,7 @@ export type Hook =
     "before:aws:deploy:deploy:updateStack" |
     "after:aws:deploy:deploy:updateStack";
 
-export type Hooks = Record<Hook, ObjOrPromise<any>>;
+export type Hooks = Partial<Record<Hook, ObjOrPromise<any>>>;
 
 export interface ServerlessPlugin {
     hooks: Hooks;
