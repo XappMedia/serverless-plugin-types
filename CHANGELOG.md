@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/XappMedia/serverless-plugin-types/compare/v0.1.23...v0.2.0) (2020-01-06)
+
+
+### Features
+
+* Adding more hooks ([e5ffbe2](https://github.com/XappMedia/serverless-plugin-types/commit/e5ffbe2))
+
+
+
 <a name="0.1.23"></a>
 ## [0.1.23](https://github.com/XappMedia/serverless-plugin-types/compare/v0.1.22...v0.1.23) (2020-01-03)
 
