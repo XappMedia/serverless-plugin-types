@@ -3,6 +3,8 @@ export type ObjOrPromise<T> = T | Promise<T>;
 export type Hook =
     "before:aws:common:validate:validate" |
     "after:aws:common:validate:validate" |
+    "before:package:compileFunctions" |
+    "after:package:compileFunctions" |
     "before:aws:deploy:deploy:createStack" |
     "after:aws:deploy:deploy:createStack" |
     "before:aws:deploy:deploy:updateStack" |
