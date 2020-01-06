@@ -1,10 +1,14 @@
 export type ObjOrPromise<T> = T | Promise<T>;
 
-export interface Hooks {
-    "before:aws:deploy:deploy:createStack"?: () => ObjOrPromise<any>;
-    "before:aws:deploy:deploy:updateStack"?: () => ObjOrPromise<any>;
-    "after:aws:deploy:deploy:updateStack"?: () => ObjOrPromise<any>;
-}
+export type Hook =
+    "before:aws:common:validate:validate" |
+    "after:aws:common:validate:validate" |
+    "before:aws:deploy:deploy:createStack" |
+    "after:aws:deploy:deploy:createStack" |
+    "before:aws:deploy:deploy:updateStack" |
+    "after:aws:deploy:deploy:updateStack";
+
+export type Hooks = Record<Hook, ObjOrPromise<any>>;
 
 export interface ServerlessPlugin {
     hooks: Hooks;
