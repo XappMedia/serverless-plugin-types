@@ -1,3 +1,7 @@
+## Deprecated 
+
+Do not use.  Use @types/serverless instead.
+
 # serverless-plugin-type-definitions
 
 Typescript definitions that can be used to make Serverless Plugins. Simply import this project and
